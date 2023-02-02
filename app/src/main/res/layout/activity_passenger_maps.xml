@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PassengerMapsActivity">
+
+    <LinearLayout
+        android:id="@+id/topButtonsLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/settingsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/taxi_color"
+            android:text="Settings"
+            android:textColor="@color/white"
+            map:backgroundTint="#FF9800"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/signOutButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/taxi_color"
+            android:text="Sign Out"
+            android:textColor="@color/white"
+            map:backgroundTint="#FF9800"
+            tools:ignore="TextContrastCheck" />
+
+    </LinearLayout>
+
+    <fragment
+        android:layout_below="@+id/topButtonsLayout"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/bookTaxiButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/taxi_color"
+        android:textColor="@color/white"
+        android:text="Book taxi"
+        map:backgroundTint="#FF9800"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
